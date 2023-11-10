@@ -8,32 +8,23 @@ export default function DragDrop() {
     return (
         <>
         <div style={{width: "80%", height: "100%"}}>
-            <div className="year">
-            <Quarter sectionTitle={"Fall Fresh"}/>
-            <Quarter sectionTitle={"Winter Fresh"}/>
-            <Quarter sectionTitle={"Spring Fresh"}/>
-            <Quarter sectionTitle={"Summer Fresh"}/>
-            </div>
-            <div className="year">
-            <Quarter sectionTitle={"Fall Soph"}/>
-            <Quarter sectionTitle={"Winter Soph"}/>
-            <Quarter sectionTitle={"Spring Soph"}/>
-            <Quarter sectionTitle={"Summer Soph"}/>
-            </div>
-            <div className="year">
-            <Quarter sectionTitle={"Fall Junior"}/>
-            <Quarter sectionTitle={"Winter Junior"}/>
-            <Quarter sectionTitle={"Spring Junior"}/>
-            <Quarter sectionTitle={"Summer Junior"}/>
-            </div>
-            <div className="year">
-            <Quarter sectionTitle={"Fall Senior"}/>
-            <Quarter sectionTitle={"Winter Senior"}/>
-            <Quarter sectionTitle={"Spring Senior"}/>
-            <Quarter sectionTitle={"Summer Senior"}/>
-            </div>
+            <Year title="Frosh"/>
+            <Year title="Soph"/>
+            <Year title="Junior" />
+            <Year title="Senior"/>
         </div>
         <CardBank startCards={classList} />
         </>
+    );
+}
+
+function Year({title}) {
+    return (
+        <div className="year">
+            <Quarter sectionTitle={"Fall " + title}/>
+            <Quarter sectionTitle={"Winter " + title}/>
+            <Quarter sectionTitle={"Spring " + title}/>
+            <Quarter sectionTitle={"Summer " + title}/>
+        </div>
     );
 }
