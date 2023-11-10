@@ -2,7 +2,7 @@
 import './card.css';
 import {useDrag} from 'react-dnd';
 
-export default function Card({cardData, removeCard}) {
+export default function Card({cardData, preqCleared, removeCard}) {
 
     // set up dragging functionality
     // isDragging is a bool if the component is being dragged
@@ -22,6 +22,7 @@ export default function Card({cardData, removeCard}) {
 
     return (
         <div className="card" ref={drag} style={{border: isDragging ? '2px solid yellow' : undefined}}>
+            <div style={{opacity: preqCleared ? 0 : 1, position: 'absolute', borderRadius: '50%', width: '10px', height: '10px', backgroundColor: 'red', right: '5%', top: '7%'}} />
             <div className="title">{cardData.title}</div>
             <p>{cardData.text + " credits: " + cardData.credits}</p>
         </div>

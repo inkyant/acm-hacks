@@ -1,5 +1,6 @@
 
 .card {
+    position: relative;
     background-color: rgb(143, 161, 223);
     border-radius: 10px;
     display: flex;

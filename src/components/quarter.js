@@ -42,11 +42,21 @@ export default function Quarter({sectionTitle}) {
       setClasses(oldCards => { return oldCards.filter(c => c.id != id) })
     }
 
+    const checkPrereq = (classesTaken, prereq) => {
+      return prereq.every((oneReq) => {
+        return oneReq.some((elem) => {
+          return classesTaken.includes(elem)
+        })
+      })
+    }
+
     return (
         <div className="quarter" style={{opacity: isOver && canDrop ? 0.5 : 1}} ref={drop}>
           <div className = "sectionTitle">{sectionTitle}</div>
             {classes.map((card) => {
-                return (<Card cardData={card} key={card.id} removeCard={() => removeCard(card.id)} />);
+                // let prevClass = classes.map((e) => e.title) + getPrevClasses()
+                // let c = checkPrereq(prevClass, card.prereq)
+                return (<Card cardData={card} key={card.id} preqCleared={true} removeCard={() => removeCard(card.id)} />);
             })}
         </div>
     );
