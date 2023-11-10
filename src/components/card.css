@@ -1,12 +1,14 @@
 
 .card {
-    background-color: aqua;
-    border-radius: 25px;
+    background-color: rgb(60, 98, 224);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 2px solid rgb(30, 50, 105);
 }
 
 .title {
     font-size: 18pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

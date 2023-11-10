@@ -3,4 +3,6 @@
     margin-left: 10%;
     height: 100%;
     display: flex;
+    border-right: 1px solid black;
+    border-left:1px solid black;
 }
