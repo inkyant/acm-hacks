@@ -20,8 +20,8 @@ export default function Quarter() {
     }));
   
     const addClass = ({id, remove}) => {
-      setClasses((sched) => [...sched, getClassById(id)])
       remove()
+      setClasses((sched) => [...sched, getClassById(id)])
     };
 
     const canAddClass = ({id}) => {
