@@ -19,19 +19,23 @@ export default function Quarter() {
       })
     }));
   
-    const addClass = ({id}) => {
-      console.log(id)
+    const addClass = ({id, remove}) => {
       setClasses((sched) => [...sched, getClassById(id)])
+      remove()
     };
 
     const canAddClass = ({id}) => {
-        return !classes.includes(getClassById(id)) && classes.length < 3
+        return !classes.map((c) => c.id).includes(id) && classes.length < 3
+    }
+
+    const removeCard = id => {
+      setClasses(oldCards => { return oldCards.filter(c => c.id != id) })
     }
 
     return (
         <div className="quarter" ref={drop}>
             {classes.map((card) => {
-                return (<Card title={card.title} id={card.id} />);
+                return (<Card title={card.title} id={card.id} key={card.id} removeCard={() => removeCard(card.id)} />);
             })}
         </div>
     );

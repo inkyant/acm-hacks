@@ -18,6 +18,18 @@ export const classList = [
     id: 2,
     title: "CSE20"
   },
+  {
+    id: 3,
+    title: "AM10"
+  },
+  {
+    id: 4,
+    title: "CSE100"
+  },
+  {
+    id: 5,
+    title: "ECE13"
+  },
 ]
 
 export function getClassById(id) {
