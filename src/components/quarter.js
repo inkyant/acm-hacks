@@ -6,7 +6,7 @@ import Card from "./card";
 import './quarter.css'
 
 
-export default function Quarter() {
+export default function Quarter({sectionTitle}) {
 
     const [classes, setClasses] = useState([])
 
@@ -44,6 +44,7 @@ export default function Quarter() {
 
     return (
         <div className="quarter" style={{opacity: isOver && canDrop ? 0.5 : 1}} ref={drop}>
+          <div className = "sectionTitle">{sectionTitle}</div>
             {classes.map((card) => {
                 return (<Card cardData={card} key={card.id} removeCard={() => removeCard(card.id)} />);
             })}

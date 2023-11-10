@@ -1,6 +1,6 @@
 import './classlist.css'
 
-export default function Classlist({children,sectiontitle}) {
+export default function Classlist({children}) {
 
     return (
         <div className="classlist">

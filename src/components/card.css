@@ -1,6 +1,6 @@
 
 .card {
-    background-color: rgb(60, 98, 224);
+    background-color: rgb(143, 161, 223);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -9,7 +9,24 @@
     margin-bottom:5px;
 }
 
+.cardBank{
+    
+    width:20%;
+    background-color: rgb(234,234,242);
+}
+
 .title {
     font-size: 15pt;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.sectionTitle{ /*this will be the css for all section titles including in quarters*/
+    font-size: 18px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    margin:0px;
+    border-bottom-width: 100%;
+    margin-bottom:5px;
 }

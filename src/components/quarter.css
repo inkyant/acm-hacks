@@ -1,9 +1,9 @@
 
 .quarter {
-    width: 19%;
+    width: 20%;
     height: 100%;
     border-left: 1px solid black;
     border-right: 1px solid black;
     padding: 5px;
-    background-color:rgb(208, 208, 241)
+    background-color:rgb(208, 208, 241);
 }

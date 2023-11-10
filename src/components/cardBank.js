@@ -10,7 +10,8 @@ export default function CardBank({startCards}) {
     }
 
     return (
-        <div>
+        <div className = "cardBank">
+            <div className = "sectionTitle">Class List</div>
             {cards.map((card) => {
                 return (<Card cardData={card} key={card.id} removeCard={() => removeCard(card.id)} />);
             })}
