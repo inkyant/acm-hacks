@@ -1,16 +1,22 @@
 
 .quarter {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border: 2px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
     padding: 5px;
-    background-color:rgb(208, 208, 241);
+    background-color:rgb(255, 255, 255);
 }
 
 .year{
+    margin:5px;
+    border:1px solid black;
+    border-right: 2px solid black;
+    border-left:2px solid black;
+    border-radius:5px;
     display:flex;
-    height:25%;
+    height:auto; /*set to auto allows for dynamic sizing or 25% for static*/
     width:auto;
     background-color: aqua;
 }

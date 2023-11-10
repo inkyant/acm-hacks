@@ -1,18 +1,23 @@
 
 .card {
-    background-color: rgb(143, 161, 223);
+    background-color: rgb(69, 113, 255);
     border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     border: 2px solid rgb(30, 50, 105);
     margin-bottom:5px;
+    width:auto;
 }
 
 .cardBank{
-    margin-left:2px;
+    border:2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding:5px;
+    margin:5px;
     width:20%;
-    background-color: rgb(234,234,242);
+    height:auto;
+    background-color: rgb(255, 255, 255);
 }
 
 .title {
