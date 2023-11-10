@@ -9,6 +9,7 @@
 
 .sectiontitle{ /*this will be the css for all section titles including in quarters*/
     font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;
     font-weight: bold;
     border-bottom: 2px solid black;
