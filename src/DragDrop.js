@@ -8,7 +8,8 @@ export default function DragDrop() {
     return (
         <>
         <div style={{width: "80%", height: "100%", display: "flex"}}>
-            <Quarter />
+            <Quarter>
+            </Quarter>
             <Quarter />
             <Quarter />
             <Quarter />
