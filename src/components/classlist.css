@@ -1,0 +1,17 @@
+.classlist {
+    width: 24%;
+    height: 100%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    background-color:rgb(208, 208, 241)
+}
+
+.sectiontitle{ /*this will be the css for all section titles including in quarters*/
+    font-size: 18px;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    margin:0px;
+    margin-bottom:5px;
+}

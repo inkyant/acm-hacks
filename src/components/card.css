@@ -6,9 +6,10 @@
     align-items: center;
     flex-direction: column;
     border: 2px solid rgb(30, 50, 105);
+    margin-bottom:5px;
 }
 
 .title {
-    font-size: 18pt;
+    font-size: 15pt;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
