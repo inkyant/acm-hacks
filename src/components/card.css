@@ -5,14 +5,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 2px solid rgb(33, 53, 108);
+    border: 2px solid rgb(30, 50, 105);
     margin-bottom:5px;
 }
 
 .cardBank{
     
     width:20%;
-    background-color: rgb(234, 234, 242)
+    background-color: rgb(234,234,242);
 }
 
 .title {
@@ -20,7 +20,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.sectionTitle{
+.sectionTitle{ /*this will be the css for all section titles including in quarters*/
     font-size: 18px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px;

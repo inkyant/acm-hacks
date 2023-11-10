@@ -21,7 +21,7 @@ export default function Card({title, text, id, removeCard}) {
     }))
 
     return (
-        <div className="card" ref={drag} style={{backgroundColor: isDragging ? 'red' : 'blue'}}>
+        <div className="card" ref={drag}>
             <div className="title">{title}</div>
             <p>{text}</p>
         </div>
