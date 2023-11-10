@@ -8,27 +8,45 @@ import DragDrop from "./DragDrop";
 export const classList = [
   {
     id: 0,
-    title: "CSE30"
+    title: "CSE30",
+    text: "woah",
+    credits: 7,
   },
   {
     id: 1,
-    title: "CSE13"
+    title: "CSE13",
+    text: "woah",
+    credits: 5,
   },
   {
     id: 2,
-    title: "CSE20"
+    title: "CSE20",
+    text: "woah",
+    credits: 7,
   },
   {
     id: 3,
-    title: "AM10"
+    title: "AM10",
+    text: "woah",
+    credits: 5,
   },
   {
     id: 4,
-    title: "CSE100"
+    title: "CSE100",
+    text: "hard",
+    credits: 7,
   },
   {
     id: 5,
-    title: "ECE13"
+    title: "ECE13",
+    text: "yeee",
+    credits: 5,
+  },
+  {
+    id: 6,
+    title: "CMPM17",
+    text: "easy",
+    credits: 3,
   },
 ]
 

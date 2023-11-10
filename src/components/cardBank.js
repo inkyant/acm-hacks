@@ -12,7 +12,7 @@ export default function CardBank({startCards}) {
     return (
         <div>
             {cards.map((card) => {
-                return (<Card title={card.title} id={card.id} key={card.id} removeCard={() => removeCard(card.id)} />);
+                return (<Card cardData={card} key={card.id} removeCard={() => removeCard(card.id)} />);
             })}
         </div>
     );

@@ -1,7 +1,7 @@
 
 import { useDrop } from "react-dnd";
 import { useState } from "react";
-import { classList, getClassById } from "../App";
+import { getClassById } from "../App";
 import Card from "./card";
 import './quarter.css'
 
@@ -9,6 +9,7 @@ import './quarter.css'
 export default function Quarter() {
 
     const [classes, setClasses] = useState([])
+
     const [{isOver, canDrop}, drop] = useDrop(() => ({
       accept: "class",
       drop: (item) => addClass(item),
@@ -22,10 +23,19 @@ export default function Quarter() {
     const addClass = ({id, remove}) => {
       remove()
       setClasses((sched) => [...sched, getClassById(id)])
-    };
+    }
 
     const canAddClass = ({id}) => {
-        return !classes.map((c) => c.id).includes(id) && classes.length < 3
+        // really dumb way to access current state, use setState...
+        let x = false
+        setClasses(classes => {
+          // can add class if not already added, and
+          x = !classes.map((c) => c.id).includes(id)
+          // if <= 19 credits, classes.reduce(...) sums the credits
+          x &= classes.reduce((partialSum, a) => partialSum + a.credits, 0) + getClassById(id).credits <= 19
+          return classes
+        })
+        return x
     }
 
     const removeCard = id => {
@@ -33,9 +43,9 @@ export default function Quarter() {
     }
 
     return (
-        <div className="quarter" ref={drop}>
+        <div className="quarter" style={{opacity: isOver && canDrop ? 0.5 : 1}} ref={drop}>
             {classes.map((card) => {
-                return (<Card title={card.title} id={card.id} key={card.id} removeCard={() => removeCard(card.id)} />);
+                return (<Card cardData={card} key={card.id} removeCard={() => removeCard(card.id)} />);
             })}
         </div>
     );
