@@ -1,12 +1,11 @@
 
-import Card from './card';
 import './quarter.css'
 
-export default function Quarter() {
+export default function Quarter({children}) {
 
     return (
         <div className="quarter">
-            <Card title="CSE30" />
+            {children}
         </div>
     );
 }
