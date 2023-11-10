@@ -7,6 +7,7 @@ export default function DragDrop() {
 
     return (
         <>
+            
             <div style={{ width: "80%", height: "90%" }}>
                 <Year title="Frosh" />
                 <Year title="Soph" />
