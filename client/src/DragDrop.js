@@ -45,12 +45,13 @@ function Year({ year, yearClasses, setClasses, isAllowedClass }) {
         })
     }
 
+    const year_names = {1: "Freshman", 2: "Sophomore", 3: "Junior", 4: "Senior"}
     return (
         <div className="year">
-            <Quarter sectionTitle={"Fall " + year}   classes={yearClasses[0]} addClass={(item) => addClass(0, item)} removeClass={(id) => removeClass(0, id)} isAllowedClass={(d) => isAllowedClass(0, d)} />
-            <Quarter sectionTitle={"Winter " + year} classes={yearClasses[1]} addClass={(item) => addClass(1, item)} removeClass={(id) => removeClass(1, id)} isAllowedClass={(d) => isAllowedClass(1, d)} />
-            <Quarter sectionTitle={"Spring " + year} classes={yearClasses[2]} addClass={(item) => addClass(2, item)} removeClass={(id) => removeClass(2, id)} isAllowedClass={(d) => isAllowedClass(2, d)} />
-            <Quarter sectionTitle={"Summer " + year} classes={yearClasses[3]} addClass={(item) => addClass(3, item)} removeClass={(id) => removeClass(3, id)} isAllowedClass={(d) => isAllowedClass(3, d)} />
+            <Quarter sectionTitle={"Fall (" + year_names[year] + ")"}   classes={yearClasses[0]} addClass={(item) => addClass(0, item)} removeClass={(id) => removeClass(0, id)} isAllowedClass={(d) => isAllowedClass(0, d)} />
+            <Quarter sectionTitle={"Winter (" + year_names[year] + ")"} classes={yearClasses[1]} addClass={(item) => addClass(1, item)} removeClass={(id) => removeClass(1, id)} isAllowedClass={(d) => isAllowedClass(1, d)} />
+            <Quarter sectionTitle={"Spring (" + year_names[year] + ")"} classes={yearClasses[2]} addClass={(item) => addClass(2, item)} removeClass={(id) => removeClass(2, id)} isAllowedClass={(d) => isAllowedClass(2, d)} />
+            <Quarter sectionTitle={"Summer (" + year_names[year] + ")"} classes={yearClasses[3]} addClass={(item) => addClass(3, item)} removeClass={(id) => removeClass(3, id)} isAllowedClass={(d) => isAllowedClass(3, d)} />
         </div>
     );
 }
