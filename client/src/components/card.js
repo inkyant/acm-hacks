@@ -1,4 +1,5 @@
 
+import Popup from 'reactjs-popup'
 import './card.css';
 import { useDrag } from 'react-dnd';
 
@@ -21,11 +22,24 @@ export default function Card({ cardData, preqCleared, removeCard }) {
     }))
 
     return (
+        
         <div className="card" ref={drag} style={{ border: isDragging ? '2px solid yellow' : undefined }}>
             <div style={{ opacity: preqCleared ? 0 : 1, position: 'absolute', borderRadius: '50%', width: '10px', height: '10px', backgroundColor: 'red', right: '5%', top: '7%' }} />
             <div className="title">{cardData.category + ' ' + cardData.course_num}</div>
             <div>{cardData.title}</div>
             <div>{cardData.credits + ' credits'}</div>
+            <Popup trigger={<button className='popup-button'>info</button>} modal>
+                <div className="popup-container">
+                    <div className='popup'>
+                        <div className='bold'>{cardData.category + ' ' + cardData.course_num + ': ' + cardData.title}</div>
+                        <div>{cardData.credits + ' credits'}</div>
+                        <div>{'Prerequistes: ' + cardData.prereqs}</div>
+                        <div>{cardData.description}</div>
+                        <div className='exit-text'>Click anywhere to close</div>
+                    </div>
+                </div>
+            </Popup>
         </div>
+        
     );
 }

@@ -40,3 +40,32 @@
     border-bottom-width: 100%;
     margin-bottom:5px;
 }
+
+
+.popup-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup {
+    width: 80%;
+    background-color: rgb(130, 201, 223);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.popup-button {
+    background-color: rgb(130, 201, 223);
+    border: none;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.exit-text {
+    font-weight: 600;
+}
