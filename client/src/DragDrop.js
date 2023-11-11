@@ -25,7 +25,6 @@ export default function DragDrop() {
 function Year({ year, yearClasses, setClasses }) {
 
     const addClass = (i, { id, remove }) => {
-        console.log(year, id)
         remove()
         setClasses((oldClasses) => {
             const newClasses = JSON.parse(JSON.stringify(oldClasses))
