@@ -9,10 +9,10 @@ export default function Search({ addClass }) {
     const [results, setResults] = useState([])
 
     const handleSearch = (text) => {
-        if (text.length > 2) {
-            let subject = text.match(/[a-zA-Z]{2,4}/g)
-            let number = text.match(/\d{1,3}.?/g)
-
+        let subject = text.match(/^[a-zA-Z]{2,4}/g)
+        let number = text.match(/\d{1,3}[a-zA-Z]?$/g)
+        if (subject && number) {
+            
             fetch('http://localhost:5000/courses/'+subject+'/'+number)
             .then(res => res.json())
             .then(data => {
