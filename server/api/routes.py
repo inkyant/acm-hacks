@@ -6,16 +6,17 @@ routes = Blueprint("routes", __name__)
 
 @routes.route("/courses/<category>/<course_num>", methods=['GET', 'POST'])
 def get_data(category, course_num):
-    data = Courses.query.filter(Courses.category==category.upper(), Courses.number==course_num.upper()).first()
+    data = Courses.query.filter(Courses.category==category.upper(), Courses.number.startswith(course_num.upper())).all()
+    course_list = []
     if data:
-        formatted_json = {
-            "category": data.category,
-            "course_num": data.number,
-            "title": data.title,
-            "description": data.description,
-            "credits": data.credits,
-            "prereqs": data.prereq
-        }
-    else:
-        formatted_json = dict()
-    return jsonify(formatted_json)
+        for course in data:
+            formatted_json = {
+                "category": course.category,
+                "course_num": course.number,
+                "title": course.title,
+                "description": course.description,
+                "credits": course.credits,
+                "prereqs": course.prereq
+            }
+            course_list.append(formatted_json)
+    return jsonify(course_list)
