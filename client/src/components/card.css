@@ -62,6 +62,10 @@
     border-radius: 2px;
 }
 
+.popup-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray shade */
+}
+
 .bold {
     font-weight: bold;
 }

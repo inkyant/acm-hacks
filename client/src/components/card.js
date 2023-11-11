@@ -29,15 +29,19 @@ export default function Card({ cardData, preqCleared, removeCard }) {
             <div>{cardData.title}</div>
             <div>{cardData.credits + ' credits'}</div>
             <Popup trigger={<button className='popup-button'>info</button>} modal>
-                <div className="popup-container">
-                    <div className='popup'>
-                        <div className='bold'>{cardData.category + ' ' + cardData.course_num + ': ' + cardData.title}</div>
-                        <div>{cardData.credits + ' credits'}</div>
-                        <div>{'Prerequistes: ' + cardData.prereqs}</div>
-                        <div>{cardData.description}</div>
-                        <div className='exit-text'>Click anywhere to close</div>
+                {(close) => (
+                    <div className="popup-container" onClick={close}>
+                        <div className='popup' onClick={(e) => e.stopPropagation()}>
+                            <div className='bold' style={{ fontSize: 24 }}>{cardData.category + ' ' + cardData.course_num + ': ' + cardData.title}</div>
+                            <div>{'Credits: ' + cardData.credits}</div>
+                            <div>{'Prerequistes: ' + cardData.prereqs}</div>
+                            <br/>
+                            <div>{cardData.description}</div>
+                            <br/>
+                            <div className='exit-text'>Click anywhere to close</div>
+                        </div>
                     </div>
-                </div>
+                )}
             </Popup>
         </div>
         
