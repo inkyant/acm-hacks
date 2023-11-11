@@ -7,8 +7,8 @@ export default function DragDrop() {
 
     return (
         <>
-            
-            <div style={{ width: "80%", height: "90%" }}>
+        <div className="topTitle">Title Page temp</div>
+            <div className="yearContain">
                 <Year title="Frosh" />
                 <Year title="Soph" />
                 <Year title="Junior" />
