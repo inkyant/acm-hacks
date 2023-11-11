@@ -9,16 +9,20 @@
     border: 2px solid rgb(30, 50, 105);
     margin-bottom:5px;
     width:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 }
+
 
 .cardBank{
     border:2px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding:5px;
     margin:5px;
+    margin-top:55px;
     width:20%;
-    height:auto;
+    height:100%;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .title {

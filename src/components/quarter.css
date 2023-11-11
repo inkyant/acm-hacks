@@ -7,6 +7,7 @@
     border-right: 1px solid black;
     padding: 5px;
     background-color:rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .year{
@@ -16,7 +17,34 @@
     border-left:2px solid black;
     border-radius:5px;
     display:flex;
+    min-height:25%;
     height:auto; /*set to auto allows for dynamic sizing or 25% for static*/
     width:auto;
     background-color: aqua;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.yearContain{
+    width:80%;
+    height:100%;
+    margin-top:50px;
+}
+
+.topTitle{
+    color:aliceblue;
+    font-size:23px;
+    font-weight:bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items:center;
+    display:flex;
+    overflow: hidden;
+    background-color: #0b0b5c;
+    border-radius:5px;
+    position: fixed; 
+    padding-left:25px;
+    top:0; 
+    width: 98%; 
+    height: 50px;
+    margin-right:10px;
+    z-index: 5;
 }

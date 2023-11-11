@@ -10,7 +10,8 @@ export default function DragDrop() {
 
     return (
         <>
-            <div style={{ width: "80%", height: "90%" }}>
+            <div className="topTitle">Title Page temp</div>
+            <div className="yearContain">
                 <Year year={1} yearClasses={classes[1]} setClasses={setClasses} />
                 <Year year={2} yearClasses={classes[2]} setClasses={setClasses} />
                 <Year year={3} yearClasses={classes[3]} setClasses={setClasses} />
