@@ -1,11 +1,10 @@
 
 import { useDrop } from "react-dnd";
-import { getClassById } from "../App";
 import Card from "./card";
 import './quarter.css'
 
 
-export default function Quarter({ sectionTitle, classes, addClass, removeClass}) {
+export default function Quarter({ sectionTitle, classes, addClass, removeClass }) {
 
     const [{ isOver, canDrop }, drop] = useDrop(() => ({
         accept: "class",
@@ -17,11 +16,11 @@ export default function Quarter({ sectionTitle, classes, addClass, removeClass})
         })
     }));
 
-    const canAddClass = ({ id }) => {
+    const canAddClass = ({ data }) => {
         // can add class if not already added, and
-        let x = !classes.map((c) => c.id).includes(id)
+        let x = !classes.map((c) => c.id).includes(data.id)
         // if <= 19 credits; classes.reduce(...) sums the credits
-        x &= classes.reduce((partialSum, a) => partialSum + a.credits, 0) + getClassById(id).credits <= 19
+        x &= classes.reduce((partialSum, a) => partialSum + a.credits, 0) + data.credits <= 19
         return x
     }
 

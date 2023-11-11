@@ -1,38 +1,45 @@
-import React, { useRef } from 'react'
+
+import { incrementId } from '../App';
 import './search.css'
 import { useState } from "react";
-import { useEffect } from "react";
 
 
-export default function Search() {
+export default function Search({ addClass }) {
 
-    useEffect(() => {
-        
-    }, [])
+    const [results, setResults] = useState([])
 
-    const ref = useRef(null)
+    const handleSearch = (text) => {
+        if (text.length > 2) {
+            let subject = text.match(/[a-zA-Z]{2,4}/g)
+            let number = text.match(/\d{1,3}.?/g)
 
-    const handleKeyDown = ({ key }) => {
-        if (key === 'Enter') {
-            
-            let subject = ref.current.value.match(/[a-zA-Z]{2,3}/g)
-            let number = ref.current.value.match(/\d{1,3}.?/g)
-
-            console.log('http://localhost:5000/courses/'+subject+'/'+number)
-
-            fetch('http://localhost:5000/courses/cse/12')
+            fetch('http://localhost:5000/courses/'+subject+'/'+number)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                setResults(data)
             })
             .catch(err => console.log(err));
+        } else {
+            setResults([])
         }
+    }
+
+    const handleClick = (d) => {
+        d.id = incrementId()
+        addClass(d)
     }
 
     return (
         <div className = "search-top">
-            <div className = 'search'>
-                <input ref={ref} type="text" placeholder="Search Here" onKeyDown={handleKeyDown}/>
+            <div className="search">
+                <input type="text" placeholder="Search Here" onChange={ e => handleSearch(e.target.value)}/>
+            </div>
+            <div className="search-results">
+                {results.slice(0, 5).map((d, i) => (
+                <div className="search-result" key={i} onClick={() => handleClick(d)} style={{cursor: "pointer", marginBottom: '10px'}}>
+                    {d.category + d.course_num}
+                </div>
+                ))}
             </div>
         </div>
     )

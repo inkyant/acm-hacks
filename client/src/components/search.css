@@ -1,33 +1,36 @@
 .wrapper{
-    display:flex;
-    height:50px;
-    align-items:center;
+    display: flex;
+    height: 50px;
+    align-items: center;
     justify-content: center;
     background-color: grey;
 }
 
 .search-top{
-    width:75%;
+    width: 100%;
 }
 
-.search{
-    width:100%;
+.search {
+    width: 75%;
 }
 
-.search input{
+.search input {
     width: 100%;
     padding: 15px 25px;
     font-size: 18px;
 }
 
-.search-result{
-    width:100%;
+.search-results {
+    width: 100%;
     background-color: white;
-    margin-top:10px;
+    margin: 10px 0;
 }
 
-.search-result div{
-    width: 100%;
-    padding:10px 25px;
-    background-color: white;
+.search-result {
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.search-result:hover {
+    background-color: grey;
 }

@@ -1,7 +1,7 @@
 
 import CardBank from "./components/cardBank";
 import Quarter from "./components/quarter";
-import { classList, getClassById } from "./App";
+import { classList } from "./App";
 import { useState } from "react";
 
 export default function DragDrop() {
@@ -24,11 +24,11 @@ export default function DragDrop() {
 
 function Year({ year, yearClasses, setClasses }) {
 
-    const addClass = (i, { id, remove }) => {
+    const addClass = (i, { data, remove }) => {
         remove()
         setClasses((oldClasses) => {
             const newClasses = JSON.parse(JSON.stringify(oldClasses))
-            newClasses[year][i].push(getClassById(id))
+            newClasses[year][i].push(data)
             return newClasses
         })
     }

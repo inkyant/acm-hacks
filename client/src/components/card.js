@@ -11,7 +11,7 @@ export default function Card({ cardData, preqCleared, removeCard }) {
         type: "class", // each draggable needs a "type", but we only have one type of draggable
         // we want the place we drag to get these things:
         item: {
-            id: cardData.id,
+            data: cardData,
             remove: () => removeCard(),
         },
         collect: (monitor) => ({
@@ -23,8 +23,9 @@ export default function Card({ cardData, preqCleared, removeCard }) {
     return (
         <div className="card" ref={drag} style={{ border: isDragging ? '2px solid yellow' : undefined }}>
             <div style={{ opacity: preqCleared ? 0 : 1, position: 'absolute', borderRadius: '50%', width: '10px', height: '10px', backgroundColor: 'red', right: '5%', top: '7%' }} />
-            <div className="title">{cardData.title}</div>
-            <p>{cardData.text + " credits: " + cardData.credits}</p>
+            <div className="title">{cardData.category + ' ' + cardData.course_num}</div>
+            <div>{cardData.title}</div>
+            <div>{cardData.credits + ' credits'}</div>
         </div>
     );
 }
