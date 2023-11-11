@@ -10,7 +10,7 @@ export default function DragDrop() {
 
     return (
         <>
-            <div className="topTitle">Title Page temp</div>
+            <div className="topTitle">SlugPlan</div>
             <div className="yearContain">
                 <Year year={1} yearClasses={classes[1]} setClasses={setClasses} />
                 <Year year={2} yearClasses={classes[2]} setClasses={setClasses} />

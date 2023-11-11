@@ -1,0 +1,33 @@
+.wrapper{
+    display:flex;
+    height:50px;
+    align-items:center;
+    justify-content: center;
+    background-color: grey;
+}
+
+.search-top{
+    width:30%;
+}
+
+.search{
+    width:100%;
+}
+
+.search input{
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 18px;
+}
+
+.search-result{
+    width:100%;
+    background-color: white;
+    margin-top:10px;
+}
+
+.search-result div{
+    width: 100%;
+    padding:10px 25px;
+    background-color: white;
+}

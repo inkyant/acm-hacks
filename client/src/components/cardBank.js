@@ -2,6 +2,7 @@ import { useState } from "react";
 import Card from "./card";
 import { getClassById } from "../App";
 import { useDrop } from "react-dnd";
+import Search from "./search"
 
 export default function CardBank({ startCards }) {
 
@@ -27,6 +28,7 @@ export default function CardBank({ startCards }) {
     return (
         <div className="cardBank" ref={drop}>
             <div className="sectionTitle">Class List</div>
+            <Search></Search>
             {cards.map((card) => {
                 return (<Card cardData={card} key={card.id} preqCleared={true} removeCard={() => removeCard(card.id)} />);
             })}
