@@ -3,3 +3,4 @@ requests
 lxml
 Flask
 flask-sqlalchemy
+flask-cors
