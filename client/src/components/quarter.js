@@ -1,6 +1,5 @@
 
 import { useDrop } from "react-dnd";
-import { useState } from "react";
 import { getClassById } from "../App";
 import Card from "./card";
 import './quarter.css'

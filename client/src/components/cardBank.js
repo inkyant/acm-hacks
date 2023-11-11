@@ -21,7 +21,7 @@ export default function CardBank({ startCards }) {
     }
 
     const removeCard = id => {
-        setCards(oldCards => { return oldCards.filter(c => c.id != id) })
+        setCards(oldCards => { return oldCards.filter(c => c.id !== id) })
     }
 
     return (
