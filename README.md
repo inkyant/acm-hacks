@@ -2,7 +2,8 @@
 
 A web application that allows UCSC students to develop a 4-year planner for taking courses. Students can easily search for a class to drag and drop into a quarter they want to take. (Project for ACM Hacks x GraceHacks 2023)
 
-![Screen Shot 2023-11-11 at 4 18 11 AM](https://github.com/inkyant/acm-hacks/assets/86862325/614a33b5-49c5-45fa-9e46-cf5b2b163431)
+![Screen Shot 2023-11-11 at 4 25 49 AM](https://github.com/inkyant/acm-hacks/assets/86862325/a3e0edca-aa30-46c4-afe9-13e0dbb7636f)
+
 
 # Usage
 This project consists of two components: the React application for webpage rendering and the Flask application for fetching API requests to get course information. Both components must be run for the web application to function.
