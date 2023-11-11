@@ -1,4 +1,4 @@
-# SlugPlan
+# SlugPlan (ACMHacks x GraceHacks 2023)
 
 A web application that allows UCSC students to develop a 4-year planner for taking courses. Students can easily search for a class to drag and drop into a quarter they want to take. (Project for ACM Hacks x GraceHacks 2023)
 
